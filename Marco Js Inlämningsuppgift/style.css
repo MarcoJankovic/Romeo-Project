@@ -1,0 +1,220 @@
+:root {
+    --mainWhite: #f7f9f9;
+    --mainBrown: #a76d60;
+    --darkBrown: #601700;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+/* Main Container */
+.container{
+    height:100vh;
+    width:100%;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Input Container*/
+.input-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  /* Style the form icons */
+  .icon {
+    padding: 10px;
+    background: var(--mainBrown);
+    min-width: 50px;
+    text-align: center;
+  }
+  
+  /* Style the input fields */
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 2px solid var(--mainBrown);
+  }
+  
+  
+  /* Set a style for the submit button */
+  .btnSubmit {
+    background:rgba(255, 255, 255, 0.404);
+    border-radius:5px;
+    color: var(--gray);
+    padding: 10px 20px;
+    border: solid 3px var(--mainBrown);
+    color:var(--mainBrown);
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    transition: 1s;
+  }
+  .btnSubmit:hover {
+    background: var(--darkBrown);
+    color: var(--mainWhite);
+    transition: all 1s ease-in-out;
+  }
+
+   input:hover {
+    overflow: visible;
+    border-color: blue;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 255, 0.219);
+}
+
+  :disabled {
+    opacity: 0.2 !important;
+    cursor: auto;
+}
+  
+  .btn:hover {
+    opacity: 1;
+    background:var(--mainBrown);
+    color:white;
+  }
+
+  /* Customer form to size */
+  #customer-form {
+    text-align: center;
+    height:auto;
+    max-width:976px;
+    width:100%;
+}
+
+/* MAIN TITLE FOR FORM */
+.title {
+    margin:10px;
+    font-size: 1.75rem;
+    font-weight:500;
+    line-height:1.2;
+    color:inherit;
+}
+
+
+
+.row-customer{
+  display: flex;
+  flex-wrap: wrap;
+  width:auto;
+  max-width: 976px;
+  justify-content: center;
+}
+
+.loading{
+  margin:40px;
+  align-items: center;
+}
+
+.customer-card {
+  height:16rem;
+  min-width: 280px;
+  width: 100%;
+  border: 1px solid black;
+  flex: 0;
+  margin: 10px;
+}
+
+.fail {
+  border-color: red;
+}
+.complete {
+  border-color: green;
+}
+.feedback {
+  display: none;
+}
+.loading {
+  display: none;
+}
+
+.span-first{
+  background:yellow;
+  border-radius:5px;
+  color:black;
+  width:auto;
+  position: relative;
+}
+
+.span-second {
+  position: relative;
+  background:green;
+  border-radius:5px;
+  color:white;
+
+}
+
+.span-third {
+  position: relative;
+  background:red;
+  border-radius:5px;
+  color:white;
+}
+
+.text-values{
+display:flex;
+flex-direction: column;
+}
+
+img {
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+/* LOADER */ 
+.loading {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-right: 16px solid green;
+  border-left: 16px solid rgb(243, 241, 100);
+  border-bottom: 16px solid red;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
